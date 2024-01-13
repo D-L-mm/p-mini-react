@@ -1,7 +1,7 @@
 
 function createTextNode(text) {
     return {
-        id: "TEXT_ELEMENT",
+        type: "TEXT_ELEMENT",
         props: {
             nodeValue: text,
             children: []
@@ -40,8 +40,7 @@ function render(el, container) {
     children.forEach((child) => {
         render(child, dom)
     })
-
-
+  
     container.append(dom)
 }
 
